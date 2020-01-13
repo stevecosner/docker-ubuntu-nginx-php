@@ -1,17 +1,18 @@
-# docker-ubuntu-nginx-php
-Create an Nginx web server and test php config using the Ubuntu 18.04 image.
+# docker-nginx-php
+Create a web server and test php config with phpinfo page using the nginx docker container image.
 
+Using php7.0-fpm
 
 Clone repo.
 
-cd docker-ubuntu-nginx-php
+cd docker-nginx-php
 
-docker build -t ub-nginx-php-1 .
+docker build -t nginx-php-1 .
 
-docker run -d -p 80:80 ub-nginx-php-1
+docker run -d -p 80:80 nginx-php-1
 
-docker exec <CONTAINERNAME> service php7.2-fpm start
-  
-docker exec <CONTAINERNAME> service nginx start  
+docker exec <CONTAINERNAME> service php7.0-fpm start
 
 Open browser to hostname or docker container ip and test connnection of webserver as well as php connection.
+
+
